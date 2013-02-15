@@ -1,0 +1,19 @@
+<h3>Edit Cookbook</h3>
+<%= form_for @book do |f| %>
+  <%= f.label :title, "Title" %>
+  <%= f.text_field :title %>
+  <%= f.label :cusine, "Cuisine" %>
+  <%= f.text_field :cuisine %>
+  <%= f.label :chef, "Author" %>
+  <%= f.text_field :chef %>
+  <%= f.label :image, "Image (URL)" %>
+  <%= f.text_field :image %><br>
+  <h6>Does the cookbook include any of these recipes?</h6>
+  <% Recipe.order(:name).each do |recipe| %>
+  <span><%= recipe.name %></span>
+  <%= check_box_tag "book[recipe_ids][]", recipe.id, recipe.in?(@book.recipes.to_a) %>
+  <% end %>
+
+  <%= f.submit %>
+<% end %>
+

@@ -1,0 +1,10 @@
+<h1>Cookbooks</h1>
+  <% @books.each do |book| %>
+    <div><%= link_to(book.title, book) %></div>
+    <div>Author: <%= book.chef %></div>
+    <div>Cuisine: <%= book.cuisine %></div>
+    <br>
+    <div><%= image_tag(book.image) %></div>
+    <br>
+  <% end %>
+

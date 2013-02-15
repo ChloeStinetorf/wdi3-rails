@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cookbook</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="navbar">
+        <div class="navbar-inner">
+          <nav>
+            <ul class="nav inline">
+              <li><%= link_to('Cookbooks', books_path) %></li>
+              <li><%= link_to('Recipes', recipes_path) %></li>
+              <li><%= link_to('Ingredients', ingredients_path) %></li><br>
+              <li><%= link_to('Add Cookbook', new_book_path) %></li>
+              <li><%= link_to('Add Recipe', new_recipe_path) %></li>
+              <li><%= link_to('Add Ingredient', new_ingredient_path) %></li>
+            </ul>
+          </nav>
+        </div>
+    <div class="container">
+      <div class="content">
+        <%= yield %>
+      </div>
+    </div>
+</body>
+</html>

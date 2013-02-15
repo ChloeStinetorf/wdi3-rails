@@ -1,0 +1,119 @@
+@import url(http://fonts.googleapis.com/css?family=Puritan|Lusitana|IM+Fell+French+Canon+SC|Miltonian|Raleway:400,200,300|Varela+Round);
+
+/*font-family: 'Puritan', sans-serif;
+font-family: 'Lusitana', serif;
+font-family: 'IM Fell French Canon SC', serif;
+font-family: 'Miltonian', cursive;
+font-family: 'Raleway', sans-serif;
+font-family: 'Varela Round', sans-serif;*/
+
+h1
+{
+
+  font-family: 'Raleway', sans-serif;
+  font-size: 64px;
+  font-weight: 100;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: black;
+}
+
+h3
+{
+  font-family: 'Raleway', sans-serif;
+  font-size: 36px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 100;
+  color: black;
+}
+
+h5
+{
+  font-family: 'Raleway', sans-serif;
+  font-size: 36px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: black;
+}
+
+body
+{
+  font-family: 'Raleway', sans-serif;
+  color: black;
+}
+
+.container
+{
+  height: auto !important;
+  min-height: 1000px;
+  height: 100%;
+  background: #BAD4BA;
+  }
+
+.content
+{
+  display: block;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.nav
+{
+  font-family: 'Raleway', sans-serif;
+}
+
+.navbar-inner
+{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+}
+
+.navbar .nav > li > a
+{
+  color: black;
+}
+
+a:hover
+{
+  color: #1C4D66;
+  text-decoration: none;
+}
+
+a:link
+{
+  font-size: 16px;
+}
+
+a
+{
+  color: black;
+}
+
+img
+{
+  width: 100px;
+}
+
+.book_image
+{
+  width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

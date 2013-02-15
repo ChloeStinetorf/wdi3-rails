@@ -1,0 +1,26 @@
+<h3>Add Recipe</h3>
+<%= form_for @recipe do |f| %>
+  <%= f.label :name, "Title" %>
+  <%= f.text_field :name %>
+  <%= f.label :course, "Course" %>
+  <%= f.text_field :course %>
+  <%= f.label :cooktime, "Cooking time (mins.)" %>
+  <%= f.text_field :cooktime %>
+  <%= f.label :servingsize, "Servings" %>
+  <%= f.text_field :servingsize %>
+  <%= f.label :instructions, "Instructions" %>
+  <%= f.text_field :instructions %>
+  <%= f.label :image, "Image (URL)" %>
+  <%= f.text_field :image%><br>
+  <h6>Does the recipe include any of these ingredients?</h6>
+  <% Ingredient.order(:name).each do |ingredient| %>
+  <span><%= ingredient.name %></span>
+  <%= check_box_tag("recipe[ingredient_ids][]", ingredient.id, ingredient.in?(@recipe.ingredients.to_a)) %>
+  <% end %>
+<br>
+ <%= f.submit %>
+<% end %>
+
+
+
+
