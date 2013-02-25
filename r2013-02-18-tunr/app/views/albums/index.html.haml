@@ -1,0 +1,17 @@
+#albums
+  %div= button_to('Add', new_album_path, :method => 'get', :class => 'success button radius') if is_admin
+  %h1 Albums
+  %table
+    %tr
+      %th name
+      %th image
+    - @albums.each do |album|
+      %tr{:class => cycle('row0', 'row1')}
+        %td= link_to(album.name, album_path(album))
+        %td= image_tag(album.image)
+        %td= link_to('Edit', edit_album_path(album), :class => 'success button tiny radius') if is_admin
+        %td= link_to('Delete', album, :method => 'delete', :class => 'alert button tiny radius') if is_admin
+
+
+
+

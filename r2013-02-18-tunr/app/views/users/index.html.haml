@@ -1,0 +1,20 @@
+#users
+  %table
+    %tr
+      %th name
+      %th balance
+      %th image
+      %th is admin?
+    - @users.each do |user|
+      %tr{:class => cycle('row0', 'row1')}
+        %td
+          - if user.is_admin
+            %span.label.alert= user.name
+          - else
+            %span.label.success= user.name
+
+        %td= number_to_currency(user.balance)
+        %td= image_tag(user.image)
+        %td= "admin" if user.is_admin
+        %td= button_to('Delete', user, :method => 'delete', :class => 'alert button tiny radius') if user != @auth
+

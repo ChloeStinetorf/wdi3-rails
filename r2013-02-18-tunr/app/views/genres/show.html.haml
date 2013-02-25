@@ -1,0 +1,25 @@
+%h1= @genre.name
+
+%table
+  %tr
+    %th artist
+    %th image
+    %th song
+    %th
+    %th edit
+    %th delete
+  - @genre.songs.each do |song|
+    %tr{:class => cycle('row0', 'row1')}
+      %td= song.artist.name
+      %td= image_tag(song.artist.image) if song.artist.present?
+      %td= song.name
+      %td= audio_tag(song.filename, :controls => true)
+      %td= link_to('Edit', edit_song_path(song), :class => 'success button tiny radius') if is_admin
+      %td= link_to('Delete', song, :method => 'delete', :class => 'alert button tiny radius') if is_admin
+
+
+
+
+
+
+

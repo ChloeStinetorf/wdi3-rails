@@ -1,0 +1,12 @@
+<% if @auth.present? && !@auth.is_admin %>
+<li class="has-flyout">
+    <a href="#">Mixtapes</a>
+    <a href="#" class="flyout-toggle"><span> </span></a>
+  <ul class="flyout">
+    <li><%= link_to('Create Mixtape', new_mixtape_path) %> </li>
+    <% @auth.mixtapes.each do |mixtape| %>
+      <li><%= link_to(mixtape.name, mixtape) %></li>
+    <% end %>
+  </ul>
+</li>
+<% end %>

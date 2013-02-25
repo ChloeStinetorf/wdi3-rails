@@ -1,0 +1,18 @@
+@import 'colors';
+
+table
+{
+  .row0 td
+  {
+    background-color: $row_01;
+  }
+  .row1 td
+  {
+    background-color: $row_02;
+  }
+  img
+  {
+    width: 100px;
+    height: 100px;
+  }
+}

@@ -1,0 +1,18 @@
+%h1= @mixtape.name
+
+%table
+  %tr
+    %th artist
+    %th play
+    %th song
+    %th edit
+    %th delete
+  - @mixtape.songs.each do |song|
+    %tr{:class => cycle('row0', 'row1')}
+      %td= image_tag(song.artist.image) if song.artist.present?
+      %td= audio_tag(song.filename, :controls => true)
+      %td= song.name
+      %td= link_to('Delete', song, :method => 'delete', :class => 'alert button tiny radius') if @auth.present?
+
+
+

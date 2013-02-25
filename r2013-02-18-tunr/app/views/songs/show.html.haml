@@ -1,0 +1,30 @@
+%h1= @song.name
+%p= link_to("#{number_to_currency(@song.cost)}", purchase_song_path(@song.id), :method => 'get', :class => 'success button radius') if @auth.present?
+
+%td= link_to('Edit', edit_song_path(song), :class => 'success button tiny radius') if is_admin
+
+%p= image_tag(@song.image)
+%p= audio_tag(@song.filename, :controls => 'true')
+
+%table
+  %tr
+    %th artist
+    %th album
+    %tr{:class => cycle('row0', 'row1')}
+      %td= @song.artist.name if @song.artist.present?
+      %td= @song.album.name if @song.artist.present?
+
+%h6= 'Genres'
+- @song.genres.each do |genre|
+  %p= genre.name
+
+
+
+
+
+
+
+
+
+
+

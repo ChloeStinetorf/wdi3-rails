@@ -1,0 +1,20 @@
+#songs
+  %div= button_to('Add', new_song_path, :method => 'get', :class => 'success button radius') if is_admin
+  %h1 Songs
+  %table
+    %tr
+      %th name
+      %th image
+      %th cost
+    - @songs.each do |song|
+      - if song.name != nil
+        %tr{:class => cycle('row0', 'row1')}
+          %td= link_to(song.name, song_path(song))
+          %td= image_tag(song.image)
+          %td= number_to_currency(song.cost)
+          %td= audio_tag(song.filename, :controls => 'true')
+          %td= link_to('Edit', edit_song_path(song), :class => 'success button tiny radius') if is_admin
+          %td= link_to('Delete', song, :method => 'delete', :class => 'alert button tiny radius') if is_admin
+
+
+

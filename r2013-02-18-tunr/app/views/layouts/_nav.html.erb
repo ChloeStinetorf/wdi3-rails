@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="two columns">
+    <h1><%= link_to('Tunr', root_path) %></h1>
+  </div>
+  <div class="ten columns">
+    <ul class="nav-bar right">
+
+      <li><%= render :partial => 'layouts/mixtape' %></li>
+
+      <li class="has-flyout">
+          <a href="#">Browse</a>
+          <a href="#" class="flyout-toggle"><span> </span></a>
+        <ul class="flyout">
+          <li><%= link_to('Show Artists', artists_path) %> </li>
+          <li><%= link_to('Show Albums', albums_path) %></li>
+          <li><%= link_to('Show Songs', songs_path) %></li>
+          <li><%= link_to('Show Genres', genres_path) %></li>
+        </ul>
+      </li>
+      <li><%= link_to('Home', root_path) %></li>
+      <%== intellinav %>
+    </ul>
+  </div>
+</div>
+
+
+
+
+

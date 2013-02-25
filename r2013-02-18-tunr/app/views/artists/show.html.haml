@@ -1,0 +1,16 @@
+%h1= @artist.name
+%p= image_tag(@artist.image)
+
+%table
+  %tr
+    %th album
+    %th image
+    %th edit
+    %th delete
+  - @artist.albums.uniq.each do |album|
+    %tr{:class => cycle('row0', 'row1')}
+      %td= album.name
+      %td= image_tag(album.image)
+      %td= link_to('Edit', edit_album_path(album), :class => 'success button tiny radius') if is_admin
+      %td= link_to('Delete', album, :method => 'delete', :class => 'alert button tiny radius') if is_admin
+

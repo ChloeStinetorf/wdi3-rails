@@ -1,0 +1,26 @@
+%h3= 'Purchase'
+%h4= @song.name
+%h4= number_to_currency(@song.cost)
+%p= image_tag(@song.image)
+
+.row
+  .five.columns
+    = form_tag buy_song_path do
+      =hidden_field_tag('song_id', @song.id)
+      -@auth.mixtapes.each do |mixtape|
+        %span
+          = mixtape.name
+        %span
+          = check_box_tag("song[mixtape_ids][]", mixtape.id, mixtape.in?(@song.mixtapes.to_a))
+      - if @auth.balance >= @song.cost
+        = submit_tag 'Purchase song', :class => 'round button'
+      - else
+        = submit_tag 'Purchase song', :class => 'button disabled'
+  .seven.columns
+
+
+
+
+
+
+
