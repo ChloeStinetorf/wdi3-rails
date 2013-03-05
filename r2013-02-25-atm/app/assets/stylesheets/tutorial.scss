@@ -1,0 +1,57 @@
+@import url(http://fonts.googleapis.com/css?family=Walter+Turncoat|Cutive);
+
+h1
+{
+  font-family: 'Cutive', serif;
+  font-size: 54px;
+  height: 75px;
+  margin-bottom: 0;
+}
+
+h2
+{
+  font-family: 'Walter Turncoat', cursive;
+  font-size: 24px;
+  margin: 0 auto;
+}
+
+p
+{
+  font-family: 'Walter Turncoat', cursive;
+  font-size: 16px;
+}
+
+.have_money
+{
+  border: 2px solid green;
+  background_color: green;
+}
+
+.no_money
+{
+  border: 2px solid red;
+  background_color: red;
+}
+
+#checking_balance
+{
+  width: 123px;
+}
+
+#saving_balance
+{
+  width: 123px;
+}
+
+.bank
+{
+  padding-left: 350px;
+}
+
+body
+{
+  background-color: #F7E8EE;
+}
+
+
+

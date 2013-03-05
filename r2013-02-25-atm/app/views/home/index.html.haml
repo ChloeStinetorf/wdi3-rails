@@ -1,0 +1,18 @@
+.bank
+  %h1= 'The Piggy Bank'
+  %h2= '"Saving up for something big!"'
+
+  %p= 'Spending Balance:'
+  #checking_balance
+  .checking= text_field_tag 'checking'
+  %p
+    .one= submit_tag 'deposit', :id => 'btndeposit_checking'
+    .one= submit_tag 'withdraw', :id => 'btnwithdraw_checking'
+
+
+  %p= 'Saving Balance:'
+  #saving_balance
+  .saving= text_field_tag 'saving'
+  %p
+    .one= submit_tag 'deposit', :id => 'btndeposit_saving'
+    .one= submit_tag 'withdraw', :id => 'btnwithdraw_saving'

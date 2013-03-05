@@ -1,0 +1,8 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: cookie_dough_project_development
+  pool: 5
+  host: localhost
+  username: chloestinetorf
+  password:

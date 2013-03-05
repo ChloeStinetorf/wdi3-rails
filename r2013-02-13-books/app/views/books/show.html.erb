@@ -1,0 +1,14 @@
+<%= image_tag(@book.image) %><br>
+<%= @book.title %><br>
+<%= @book.year %><br>
+<div>
+  <%= link_to('Delete', @book, :method => :delete, :confirm => 'Is it okay to delete?' ) %>
+  <%= link_to('Edit', edit_book_path(@book)) %>
+</div>
+
+
+
+
+
+
+

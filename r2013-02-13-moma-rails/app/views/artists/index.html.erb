@@ -1,0 +1,12 @@
+<h1>Artists</h1>
+<br>
+<% @artists.each do |artist| %>
+<section>
+   <div><%= link_to(artist.name, artist) %></div>
+    <div><%= image_tag(artist.image) %></div>
+    <div>Nationality: <%= artist.nationality %></div>
+    <div>Date of Birth: <%= artist.dob.strftime('%B %d, %Y') %></div>
+    <div>Movement: <%= artist.movement %></div>
+  </section>
+<% end %>
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>R20130211Routing</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/start">Start Page</a></li>
+      <li><a href="/a">A Page</a></li>
+      <li><a href="/b">B Page</a></li>
+      <li><a href="/1">1 Page</a></li>
+      <li><a href="/2">2 Page</a></li>
+      <li><a href="/3">3 Page</a></li>
+    </ul>
+  </nav>
+<%= yield %>
+
+</body>
+</html>

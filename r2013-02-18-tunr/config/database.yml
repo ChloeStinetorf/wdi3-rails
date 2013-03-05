@@ -4,5 +4,5 @@ development:
   database: r2013-02-18-tunr_development
   pool: 5
   host: localhost
-  username: postgres
-  password: chloe1234
+  username: chloestinetorf
+  password:

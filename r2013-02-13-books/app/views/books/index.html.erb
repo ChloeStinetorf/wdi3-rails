@@ -1,0 +1,7 @@
+<div>
+  <% @books.each do |book| %>
+    <%= image_tag(book.image) %>
+    <%= link_to(book.title, book) %>
+    <%= book.year %>
+  <% end %>
+</div>

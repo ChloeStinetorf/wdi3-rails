@@ -1,0 +1,185 @@
+.orbit-wrapper .timer
+{
+  display: none;
+}
+
+*
+{
+  list-style-type: none;
+}
+
+body, html
+{
+  background: #A7E2D2;
+  min-height: 100%;
+}
+
+.row
+{
+  background: white;
+}
+
+a
+{
+  color: white;
+}
+
+.button a:hover
+{
+  color: #1b3d50;
+}
+
+.button:hover
+{
+  background-color: #a7e2d2;
+}
+
+.nav-bar > li > a
+{
+  color: white;
+  font-family: "adelle",sans-serif;
+  font-weight: bold;
+}
+
+.button_padding
+{
+  padding-bottom: 12px;
+  padding-top: 25px;
+}
+
+.button
+{
+  background: #1B3D50;
+  font-family: "adelle",sans-serif;
+}
+
+.excitement
+{
+  color: #1B3D50;
+}
+
+
+.submit_button
+{
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+.order_button
+{
+  margin-bottom: 40px;
+}
+
+.confirmation_button
+{
+  margin-bottom: 12px;
+}
+
+.row_padding
+{
+  padding-left: 30px;
+}
+
+.form_rows
+{
+  padding-left: 50px;
+  padding-right: 500px;
+}
+
+#order_instructions
+{
+  font-size: 15px;
+  width: 550px;
+}
+
+.ingredients_link
+{
+  color: black;
+}
+
+.cta
+{
+  width: 400px;
+  font-size: 36px;
+  margin-bottom: 40px;
+  margin-top: 16px;
+  margin-left: 46px;
+}
+
+.start_order
+{
+  width: 200px;
+  font-size: 24px;
+}
+
+.chloe_doughy
+{
+  font-family: "ff-prater-script-web",sans-serif;
+  font-size: 36px;
+  margin-left: 52px;
+}
+
+h1
+{
+  padding-left: 20px;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+  font-family: "raleway",sans-serif;
+}
+
+h4, h5, h6
+{
+  font-family: "proxima-nova-alt",sans-serif;
+}
+
+form
+{
+  font-family: "proxima-nova-alt",sans-serif;
+}
+/*
+.index
+{
+  border-left: 1px solid #ccc;
+}*/
+
+.has-tip
+{
+  border-bottom: none;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.has-tip:hover
+{
+  border-bottom: none;
+  color: #3CB48E;
+  font-weight: bold;
+}
+
+
+/*font-family: "ff-prater-script-web",sans-serif;
+font-family: "raleway",sans-serif;
+font-family: "proxima-nova-alt",sans-serif;
+font-family: "adelle",serif;*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

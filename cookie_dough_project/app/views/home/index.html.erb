@@ -1,0 +1,46 @@
+<!-- First Band (Slider) -->
+  <!-- The Orbit slider is initialized at the bottom of the page by calling .orbit() on #slider -->
+
+  <div class="row row_footer">
+    <div class="five columns">
+      <div id="slider">
+        <img src="assets/cookieslider1.png" />
+        <img src="assets/cookieslider2.png" />
+        <img src="assets/cookieslider3.png" />
+        <img src="assets/cookieslider4.png" />
+        <img src="assets/cookieslider5.png" />
+        <img src="assets/cookieslider6.png" />
+        <img src="assets/cookieslider7.png" />
+        <img src="assets/cookieslider8.png" />
+        <img src="assets/cookieslider9.png" />
+        <img src="assets/cookieslider10.png" />
+        <img src="assets/cookieslider11.png" />
+        <img src="assets/cookieslider12.png" />
+      </div>
+
+      <hr />
+    </div>
+    <div class="seven columns index">
+      <h1>Fresh cookie dough delivered right to your door.</h1>
+        <div class="row button_padding">
+          <div class="twelve columns">
+            <button class="round button cta"><%= link_to "Start Order", page_path("dough_order") %></button>
+          </div>
+        </div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+     $(window).load(function() {
+         $('#slider').orbit({
+          directionalNav: false,
+          timer: true,
+          fluid: "9x11",
+          animation: "fade" });
+     });
+  </script>
+
+
+
+

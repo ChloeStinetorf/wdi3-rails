@@ -1,0 +1,32 @@
+%h1 flickr
+
+%h3 Enter image dimensions in pixels and slideshow duration in seconds:
+
+%table
+  %tr
+    %td Keyword:
+    %td Width:
+    %td Height:
+    %td Duration:
+  %tr
+    %td
+      = text_field_tag 'search', nil, :autofocus  => true
+    %td
+      = text_field_tag 'width', nil
+    %td
+      = text_field_tag 'height', nil
+    %td
+      = text_field_tag 'duration', nil
+
+%div.buttons
+  = button_tag 'Search Flickr', :id => 'flickr'
+  = button_tag 'Clear Images', :id => 'clear'
+#images
+
+
+
+
+
+
+
+

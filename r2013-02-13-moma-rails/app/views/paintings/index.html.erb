@@ -1,0 +1,12 @@
+<h1>Paintings</h1>
+<br>
+<% @paintings.each do |painting| %>
+<section>
+   <div><%= link_to(painting.title, painting) %></div>
+    <div><%= image_tag(painting.image) %></div>
+    <div>Medium: <%= painting.medium %></div>
+    <div>Year: <%= painting.year %></div>
+    <div>Style: <%= painting.style %></div>
+  </section>
+<% end %>
+

@@ -11,11 +11,11 @@
         %span
           = mixtape.name
         %span
-          = check_box_tag("song[mixtape_ids][]", mixtape.id, mixtape.in?(@song.mixtapes.to_a))
-      - if @auth.balance >= @song.cost
-        = submit_tag 'Purchase song', :class => 'round button'
-      - else
-        = submit_tag 'Purchase song', :class => 'button disabled'
+          = check_box_tag("song[mixtape_ids][]", mixtape.id
+        - if @auth.balance >= @song.cost
+          = submit_tag 'Purchase song', :class => 'round button'
+        - else
+          = submit_tag 'Purchase song', :class => 'button disabled'
   .seven.columns
 
 

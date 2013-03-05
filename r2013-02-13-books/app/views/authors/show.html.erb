@@ -1,0 +1,15 @@
+<%= image_tag(@author.image) %><br>
+<%= @author.name %><br>
+<%= @author.genre %><br>
+<div>
+  <%= link_to('Delete', @author, :method => :delete, :confirm => 'Is it okay to delete?' ) %>
+  <%= link_to('Edit', edit_author_path(@author)) %>
+</div>
+
+<% @author.books.each do |book| %>
+  <%= image_tag(book.image) %><br>
+  <%= book.title %><br>
+  <%= book.year %><br>
+<% end %>
+
+

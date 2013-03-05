@@ -1,0 +1,10 @@
+.row
+  .twelve.columns
+    %h1 All Users
+
+.row
+  .twelve.columns
+    - @users.each do |user|
+      %ul
+        %li= user.name
+        %li= user.email

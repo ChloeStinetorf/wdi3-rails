@@ -12,7 +12,7 @@
     %th album
     %tr{:class => cycle('row0', 'row1')}
       %td= @song.artist.name if @song.artist.present?
-      %td= @song.album.name if @song.artist.present?
+      %td= @song.album.name if @song.album.present?
 
 %h6= 'Genres'
 - @song.genres.each do |genre|

@@ -1,0 +1,16 @@
+img
+{
+  width: 200px;
+  border: 2px solid #ccc;
+}
+
+body
+{
+  font-family: courier;
+  padding-left: 300px;
+}
+
+section
+{
+ padding-bottom: 20px;
+}

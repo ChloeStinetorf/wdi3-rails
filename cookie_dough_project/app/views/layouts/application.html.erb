@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Chloe Doughy</title>
+
+<%= stylesheet_link_tag    "application", :media => "all" %>
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tags %>
+
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+
+  <!-- Included CSS Files (Compressed) -->
+  <!-- <link rel="stylesheet" href="stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="stylesheets/app.css">-->
+
+  <!-- <script src="javascripts/modernizr.foundation.js"></script>-->
+  <script type="text/javascript" src="//use.typekit.net/sut4ysm.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+<body>
+
+  <!-- Header and Nav -->
+
+  <div class="row">
+    <div class="four columns">
+      <a href="/"><h1 class="chloe_doughy">chloe doughy</h1></a>
+    </div>
+    <div class="eight columns">
+      <ul class="nav-bar right">
+        <li><%= link_to "Home", "/" %></li>
+        <li><%= link_to "Start Order", page_path("dough_order") %></li>
+        <li><%= link_to "Instructions", page_path("instructions") %></li>
+        <li><%= link_to "Ingredients", page_path("ingredients") %></li>
+        <li><%= link_to "About", page_path("about") %></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- End Header and Nav -->
+
+<%= yield %>
+
+
+  <!-- Included JS Files (Uncompressed) -->
+  <!--
+
+  <script src="javascripts/jquery.js"></script>
+
+  <script src="javascripts/jquery.foundation.mediaQueryToggle.js"></script>
+
+  <script src="javascripts/jquery.foundation.forms.js"></script>
+
+  <script src="javascripts/jquery.event.move.js"></script>
+
+  <script src="javascripts/jquery.event.swipe.js"></script>
+
+  <script src="javascripts/jquery.foundation.reveal.js"></script>
+
+  <script src="javascripts/jquery.foundation.orbit.js"></script>
+
+  <script src="javascripts/jquery.foundation.navigation.js"></script>
+
+  <script src="javascripts/jquery.foundation.buttons.js"></script>
+
+  <script src="javascripts/jquery.foundation.tabs.js"></script>
+
+  <script src="javascripts/jquery.foundation.tooltips.js"></script>
+
+  <script src="javascripts/jquery.foundation.accordion.js"></script>
+
+  <script src="javascripts/jquery.placeholder.js"></script>
+
+  <script src="javascripts/jquery.foundation.alerts.js"></script>
+
+  <script src="javascripts/jquery.foundation.topbar.js"></script>
+
+  <script src="javascripts/jquery.foundation.joyride.js"></script>
+
+  <script src="javascripts/jquery.foundation.clearing.js"></script>
+
+  <script src="javascripts/jquery.foundation.magellan.js"></script>
+
+  -->
+
+  <!-- Included JS Files (Compressed) -->
+  <!--<script src="javascripts/jquery.js"></script>
+  <script src="javascripts/foundation.min.js"></script>-->
+
+  <!-- Initialize JS Plugins -->
+  <!-- <script src="javascripts/app.js"></script>-->
+
+
+</body>
+</html>

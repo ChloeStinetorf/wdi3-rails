@@ -1,0 +1,8 @@
+<h1>Mountains</h1>
+
+<% @mountains.each do |mountain| %>
+<%= link_to(mountain.name, mountain_path(mountain.id)) %>
+<%= button_to('Delete', mountain_delete_path(mountain.id)) %>
+<%= link_to('Edit', mountain_edit_path(mountain.id)) %>
+<% end %>
+

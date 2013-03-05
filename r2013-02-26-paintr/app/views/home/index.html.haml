@@ -1,0 +1,15 @@
+%h1 paintr
+#selected.box
+.clear
+= text_field_tag 'color', nil, :autofocus => true
+= button_tag 'Add Color', :id => 'add_color'
+= button_tag 'Erase Color', :id => 'erase_color'
+= button_tag 'Erase Painting', :id => 'erase_painting'
+#color_swatches
+.clear
+= text_field_tag 'image'
+= button_tag 'Add Image URL', :id => 'add_image'
+#images
+.clear
+#canvas
+  .clear

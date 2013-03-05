@@ -1,0 +1,8 @@
+<form method='post' action='<%= mountain_path(@mountain.id) %>'>
+  <input value='<%= @mountain.name %>' type='text' name='mountain[name]' placeholder='name' autofocus>
+  <input value='<%= @mountain.image %>' type='text' name='mountain[image]' placeholder='image'>
+  <input value='<%= @mountain.range %>' type='text' name='mountain[range]' placeholder='range'>
+  <input value='<%= @mountain.country %>' type='text' name='mountain[country]' placeholder='country'>
+  <input value='<%= @mountain.elevation %>' type='text' name='mountain[elevation]' placeholder='elevation'>
+  <button>Save changes</button>
+</form>

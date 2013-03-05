@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  in_theatres: false
+  released: 2013-02-11
+  other: MyText
+
+two:
+  title: MyString
+  in_theatres: false
+  released: 2013-02-11
+  other: MyText
