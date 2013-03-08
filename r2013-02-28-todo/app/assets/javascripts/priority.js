@@ -24,6 +24,8 @@ function hide_form()
   $('.form').hide();
 }
 
+// gets called when user is trying to submit new priority form, makes AJAX request, when request is finished new priority shows up
+
 function create_priority()
 {
   var name = $('#name').val();
@@ -55,9 +57,10 @@ function add_priority_to_array(priority)
   priorities = _.sortBy(priorities, function(p){ return p.value; }).reverse();
 }
 
+//Takes in a priority and creates DOM elements on page (after AJAX request)
 function display_priority(priority)
 {
-
+//creates divs
   var li = $('<li>');
   var div1 = $('<div>');
   var div2 = $('<div>');
@@ -66,6 +69,7 @@ function display_priority(priority)
   var div5 = $('<div>');
   var div6 = $('<div>');
 
+//creates image elements and adds icons
   var img1 = $('<img>');
   var img2 = $('<img>');
   img1.addClass('up');
@@ -74,6 +78,7 @@ function display_priority(priority)
   img2.attr('src', '/assets/famfamfam/arrow_down.png')
   div1.append([img1, img2]);
 
+//adds classes to newly created divs
   div1.addClass('priority');
   div2.addClass('priority').addClass('color');
   div3.addClass('priority');
@@ -81,11 +86,13 @@ function display_priority(priority)
   div5.addClass('priority').addClass('hide');
   div6.addClass('clear');
 
+//fills in newly created divs/imgs with attributes of new priority
   div2.css('background-color', priority.color);
   div3.text(priority.name);
   div4.text(priority.value);
   div5.text(priority.id);
 
+//add new divs into list item, then adds list item into DOM
   li.append([div1, div2, div3, div4, div5, div6]);
   $('.pri_list').append(li);
 

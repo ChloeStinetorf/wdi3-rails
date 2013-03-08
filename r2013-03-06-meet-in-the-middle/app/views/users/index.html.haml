@@ -1,0 +1,40 @@
+%script
+  var users = [];
+
+%script
+  = "users.push({id:#{@auth.id}, name:'#{@auth.name}', image:'#{@auth.image}', bio:'#{@auth.bio}', address:'#{@auth.address}', latitude:#{@auth.latitude}, longitude:#{@auth.longitude}});"
+
+.row
+  .twelve.columns
+    %h3.banner
+
+.row
+  .nine.columns
+    #map_canvas
+    %script
+      display_map(40.7316, -95.9901, 3);
+
+  .three.columns
+
+    %ul.user_list
+      - @users.each do |user|
+        %li
+          %script
+            / = "add_marker(#{user.latitude}, #{user.longitude}, '#{user.name}');"
+            = "users.push({id:#{user.id}, name:'#{user.name}', image:'#{user.image}', bio:'#{user.bio}', address:'#{user.address}', latitude:#{user.latitude}, longitude:#{user.longitude}});"
+        %li= image_tag(user.image)
+        %li= user.name
+        %li= user.bio
+        %li= user.address
+        %li= button_tag 'Meet Up!', :id => 'initiate_lookup', :class => 'button radius tiny info meet'
+        %li.hide= user.id
+        %li.clear
+
+
+
+
+
+
+
+
+

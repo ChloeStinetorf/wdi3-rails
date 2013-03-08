@@ -1,0 +1,9 @@
+.row
+  .large-12.columns
+    = link_to('New', new_user_path, :remote => true, :class => 'button radius tiny alert')
+
+#new_user
+.row
+  .large-12.columns
+    %ol#users
+      = render(:partial => 'users')

@@ -1,5 +1,8 @@
 %h3 tasks
 
+%script
+  var tasks = [];
+
 #map_canvas
 
 %script
@@ -10,9 +13,13 @@
     %li
       %script
         = "add_marker(#{task.latitude}, #{task.longitude}, '#{task.title}');"
+        = "tasks.push({id:#{task.id}, title:'#{task.title}', priority_id:#{task.priority_id}, description:'#{task.description}', due_date:'#{task.due_date}', is_complete:'#{task.is_complete}', address:'#{task.address}', priority: {color: '#{task.priority.color}', name: '#{task.priority.name}', value: #{task.priority.value} } });"
     %li
-      %span= task.priority.try(:color)
+      %span.priority.color= task.priority.try(:color)
       %span= task.title
+      %span= button_tag 'Edit', :class => 'edit_task', 'data-task-id' => task.id;
+      %span= button_tag 'Delete', :class => 'delete_task';
+
     / %li= task.description
     / %li= task.due_date
     / %li= task.is_complete
@@ -22,7 +29,7 @@
 .row
   .six.columns
     .new
-      = button_tag 'New Task', :id => 'new_task', :class => 'button success';
+      = button_tag 'New Task', :id => 'new_task', :class => 'button radius success';
     .taskform.hide
       = form_tag do
         = label_tag 'priority_id'
@@ -39,7 +46,7 @@
         = text_area_tag 'address'
         = hidden_field_tag 'task_id'
         = submit_tag 'Save', :id => 'create_task', :class => 'button success';
-        = submit_tag 'Edit', :id => 'update_task', :class => 'button info'
+        = submit_tag 'Update', :id => 'update_task', :class => 'button success';
         = link_to('Cancel', '#', :id => 'cancel_task', :class => 'button alert');
   .six.columns
 

@@ -15,3 +15,9 @@ function add_marker(lat, long, title)
   var latlng = new google.maps.LatLng(lat, long);
   var marker = new google.maps.Marker({position: latlng, map: map, title: title});
 }
+
+function clear_markers()
+{
+  _.each(markers, function(m){m.setMap(null);});
+  markers = [];
+}
