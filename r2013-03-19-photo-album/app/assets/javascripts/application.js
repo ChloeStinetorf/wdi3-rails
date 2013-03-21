@@ -1,0 +1,9 @@
+//= require jquery
+//= require jquery_ujs
+//= require jquery.remotipart
+//= require 'jqueryui/js/jqueryui.js'
+//= require 'foundation/js/vendor/custom.modernizr.js'
+//= require 'foundation/js/foundation.min.js'
+//= require 'album.js.coffee'
+//= require 'home.js.coffee'
+//= require 'album.js.coffee'

@@ -34,7 +34,7 @@ describe 'POST /login' do
     click_link('Login')
     fill_in('Email', :with => user.email)
     fill_in('Password', :with => 'b')
-    click_button('Start Flirting')
+    click_button('Sart Flirting')
     page.should have_button('Start Flirting')
   end
 end
@@ -49,3 +49,9 @@ end
   end
 
 end
+
+
+
+
+
+
