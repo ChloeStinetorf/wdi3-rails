@@ -1,0 +1,13 @@
+#new_stock
+.row
+  .large-4.columns
+    .float
+      = link_to('Add Stock', new_stock_path, :remote => true, :class => 'button radius tiny alert')
+    .float
+      = button_tag('Chart', :class => 'button radius tiny info', :id => 'show_chart')
+    .clear
+  .large-8.columns
+
+#chart
+
+

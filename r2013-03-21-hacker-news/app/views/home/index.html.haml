@@ -1,0 +1,13 @@
+.row
+  .large-4.columns
+    %h1 hacker news
+    = form_tag scrape_path, :remote => true do
+      = label_tag 'Pages:'
+      = text_field_tag 'pages', nil, :autofocus => true
+      = submit_tag 'Scrape!', :class => 'button radius alert'
+    #stories
+      = render :partial => 'shared/stories'
+  .large-8.columns
+
+
+

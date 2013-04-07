@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Gudea);
+
 .hide
 {
   display: hidden;
@@ -35,7 +37,10 @@ li
   width: 500px;
 }
 
-
+h1, h3
+{
+  font-family: 'Gudea', sans-serif;
+}
 
 
 

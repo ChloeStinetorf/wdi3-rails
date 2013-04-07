@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Tradr</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+
+<div class="row">
+  <div class="large-12 columns">
+    <div class="nav-bar right">
+     <ul class="button-group">
+       <li><%= link_to('Home', root_path, :class => 'button info') %></li>
+       <li><%= link_to('Users', users_path, :class => 'button info') %></li>
+       <li><%= login_nav %></li>
+      </ul>
+    </div>
+    <h2>Tradr</h2>
+  </div>
+</div>
+
+
+  <%= yield %>
+
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr />
+      <div class="row">
+        <div class="large-6 columns">
+          <p>&copy; Chloe Stinetorf</p>
+        </div>
+        <div class="large-6 columns">
+          <ul class="inline-list right">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+  $(document).foundation();
+  </script>
+
+</body>
+</html>

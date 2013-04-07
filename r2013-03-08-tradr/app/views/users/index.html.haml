@@ -1,0 +1,10 @@
+.row
+  .large-12.columns
+    = link_to('Add User', new_user_path, :remote => true, :class => 'button radius tiny info')
+
+#new_user
+.row
+  .large-12.columns
+    %table#users
+      = render(:partial => 'users')
+

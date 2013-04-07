@@ -1,0 +1,10 @@
+%table
+  %tr
+    %th Username
+    %th Email
+  - @users.each do |user|
+    %tr
+      %td= link_to(user.username, email_user_path(user), :remote => true)
+      %td= user.email
+
+

@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: r2013-04-07-email_development
+  pool: 5
+  host: localhost
+  username: chloestinetorf
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: r2013-04-07-email_test
+  pool: 5
+  host: localhost
+  username: chloestinetorf
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: r2013-04-07-email_production
+  pool: 5
+  host: localhost
+  username: chloestinetorf
+  password:
